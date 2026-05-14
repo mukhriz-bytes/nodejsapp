@@ -22,6 +22,9 @@ app.get('/data', (req, res) => {
 
 app.get('/update', (req, res) => {
     res.send('This is an updated data for CI/CD pipeline.');
+
+app.get('/update/2', (req, res) => {
+    res.send('This is a test for CI/CD pipeline.');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
