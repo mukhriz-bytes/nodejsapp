@@ -20,7 +20,7 @@ app.get('/data', (req, res) => {
     res.send('This is some data to test the CI/CD pipeline.');
 });
 
-app.get('/api', (req, res) => {
+app.get('/endpoint', (req, res) => {
     res.send('This is the API endpoint.');
 });
 
