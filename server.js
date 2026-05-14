@@ -20,6 +20,10 @@ app.get('/data', (req, res) => {
     res.send('This is some data from the server.');
 });
 
+app.get('/update', (req, res) => {
+    res.send('This is an updated data for CI/CD pipeline.');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running at http://0.0.0.0:${PORT}/`);
 });
