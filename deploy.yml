@@ -16,13 +16,18 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          # Load NVM and Node
+          # Navigate to project folder
+          cd ~/nodejsapp
+          
+          # Load NVM and Node environment
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           
-          cd ~/nodejsapp
+          # Update code and dependencies
           git fetch --all
           git reset --hard origin/main
           npm install --production
-          pm2 restart mern-app --update-env || pm2 start server.js --name "mern-app"
+          
+          # Restart the app (using 'server' as the name)
+          pm2 restart server || pm2 start server.js --name "server"
           pm2 save
