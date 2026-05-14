@@ -17,14 +17,7 @@ app.get('/api', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-    res.send('This is some data from the server.');
-});
-
-app.get('/update', (req, res) => {
-    res.send('This is an updated data for CI/CD pipeline.');
-});
-app.get('/update/2', (req, res) => {
-    res.send('This is a test for CI/CD pipeline.');
+    res.send('This is some data to test the CI/CD pipeline.');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
