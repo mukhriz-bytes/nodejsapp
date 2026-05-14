@@ -16,6 +16,10 @@ app.get('/api', (req, res) => {
     res.send('Hello MERN zrmkhrz batch 3!');
 });
 
+app.get('/data', (req, res) => {
+    res.send('This is some data from the server.');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running at http://0.0.0.0:${PORT}/`);
 });
