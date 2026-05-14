@@ -20,6 +20,14 @@ app.get('/data', (req, res) => {
     res.send('This is some data to test the CI/CD pipeline.');
 });
 
+app.get('/api', (req, res) => {
+    res.send('This is the API endpoint.');
+});
+
+app.get('/update', (req, res) => {
+    res.send('This is an updated endpoint for CI/CD pipeline testing.');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running at http://0.0.0.0:${PORT}/`);
 });
